@@ -10,7 +10,7 @@ import {
 import { id } from "ethers/lib/utils";
 import { fetchIPFS } from "../../../functionality/fetchIPFS";
 import { ethers } from "ethers";
-import { fetchPriceFeeds } from "../../../functionality/fetchPriceFeeds";
+// import { fetchPriceFeeds } from "../../../functionality/fetchPriceFeeds";
 /// for payment Request
 
 export default function Id() {
@@ -70,17 +70,17 @@ export default function Id() {
     }
   };
 
-  const convertUSDtoMatic = async (amountInMatic) => {
-    try {
-      const maticUSD = await fetchPriceFeeds();
-      const amountInUSD = maticUSD * amountInMatic;
-      console.log(amountInUSD);
-      setAmount$(amountInUSD);
-      return amountInUSD;
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const convertUSDtoMatic = async (amountInMatic) => {
+  //   try {
+  //     const maticUSD = await fetchPriceFeeds();
+  //     const amountInUSD = maticUSD * amountInMatic;
+  //     console.log(amountInUSD);
+  //     setAmount$(amountInUSD);
+  //     return amountInUSD;
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   useEffect(() => {
     setUserAddress(_address);

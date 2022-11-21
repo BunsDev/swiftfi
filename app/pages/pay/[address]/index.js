@@ -26,7 +26,7 @@ export default function Home() {
   useEffect(() => {
     console.log("it worked ");
     setUserAddress(_address);
-  }, [_id]);
+  }, [_address]);
 
   return (
     <div>
